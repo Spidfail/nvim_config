@@ -21,12 +21,9 @@ require'nvim-treesitter.configs'.setup {
 	  "regex",
 	  "json",
 	  "lua",
-	  "vim",
 	  "python",
 	  "html",
 	  "rust",
-	  "dockerfile",
-	  "make",
 	  "javascript",
   },
 }

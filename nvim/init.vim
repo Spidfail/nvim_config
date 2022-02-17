@@ -4,6 +4,8 @@ autocmd!
 
 if !1 | finish | endif " stop loading config if it's on tiny or small
 
+" This will read plugin configuration
+runtime ./plug.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -67,13 +69,15 @@ if exists("&termguicolors")
 	if (empty($TMUX))
 		let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	endif
-	colorscheme tokyonight
+	colorscheme nord
+	" tokyonight
 	" gruvbox
-	" nord
 	" dracula
 	" palenight
 	" OceanicNext
-	let g:tokyonight_style = 'night' " available: night, storm
+	if exists('g:tokyonight_style')
+		let g:tokyonight_style = 'night' " available: night, storm
+	endif
 	set background=dark
 	if exists("&winblend")
 		set winblend=0
@@ -97,9 +101,6 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" This will read plugin configuration
-runtime ./plug.vim
-
 " fuzzfizer or fzf config
 nnoremap <C-p> :GFiles<CR>
 let g:fzf_action = {
@@ -108,4 +109,6 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 
+" Automatically load other vim scripts files
 set exrc
+
