@@ -8,19 +8,19 @@ Git to store and share my Neovim config. Stay simple with a basic configuration 
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
 | `[space] - e`		|		show Diagnostics						|
-| [space] - q		|		add the diagnostics to location list	|
-| ]d (or) [d		|		go to next/previous diagnostic			|
+| `[space] - q`		|		add the diagnostics to location list	|
+| `]d (or) [d` 		|		go to next/previous diagnostic			|
 
 ##### Common LSP features :
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
-| g - d				|		go to definition						|
-| g - D				|		go to declaration						|
-| g - i				|		go to implementation					|
-| K    				|		open the Hover (brief view of object)	|
-| [Ctrl] - K		|		display the signature information		|
-| g - r				|		add reference in quickfix window		|
-| [space] - f 		|		format									|
+| `g - d`			|		go to definition						|
+| `g - D`			|		go to declaration						|
+| `g - i`			|		go to implementation					|
+| `K`    			|		open the Hover (brief view of object)	|
+| `[Ctrl] - K`		|		display the signature information		|
+| `g - r`			|		add reference in quickfix window		|
+| `[space] - f` 	|		format									|
 
 ##### Workspace 	:
 | Shortcut			|		Description 							|
