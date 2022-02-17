@@ -4,14 +4,14 @@ Git to store and share my Neovim config. Stay simple with a basic configuration 
 
 ### Lsp-config
 
-#### Diagnostics :
+##### Diagnostics :
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
 | [space] - e		|		show Diagnostics						|
 | [space] - q		|		add the diagnostics to location list	|
 | ]d | [d			|		go to next/previous diagnostic			|
 
-#### Common LSP features :
+##### Common LSP features :
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
 | g - d				|		go to definition						|
@@ -22,7 +22,7 @@ Git to store and share my Neovim config. Stay simple with a basic configuration 
 | g - r				|		add reference in quickfix window		|
 | [space] - f 		|		format									|
 
-#### Workspace 	:
+##### Workspace 	:
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
 | [space] - wa		|		add workspace							|
