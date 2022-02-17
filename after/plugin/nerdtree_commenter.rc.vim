@@ -1,4 +1,4 @@
-if !exists('g:NERDTreeHighlightFolders')
+if !exists('g:NERDCompactSexyComs')
 	finish
 endif
 

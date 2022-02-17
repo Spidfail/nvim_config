@@ -30,7 +30,6 @@ call plug#begin("~/.config/nvim/plugged")
 
 	  Plug 'folke/lsp-colors.nvim'
 	  Plug 'onsails/lspkind-nvim'
-	  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }
 	  Plug 'hrsh7th/cmp-nvim-lsp'
 	  Plug 'hrsh7th/cmp-buffer'
 	  Plug 'hrsh7th/cmp-cmdline'
