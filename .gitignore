@@ -1,5 +1,3 @@
 old_*
 
-autoload/*
-
-plugged
+nvim/plugged
