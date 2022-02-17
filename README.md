@@ -7,9 +7,9 @@ Git to store and share my Neovim config. Stay simple with a basic configuration 
 ##### Diagnostics :
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
-| [space] - e		|		show Diagnostics						|
+| `[space] - e`		|		show Diagnostics						|
 | [space] - q		|		add the diagnostics to location list	|
-| ]d | [d			|		go to next/previous diagnostic			|
+| ]d (or) [d		|		go to next/previous diagnostic			|
 
 ##### Common LSP features :
 | Shortcut			|		Description 							|
