@@ -27,6 +27,7 @@ call plug#begin("~/.config/nvim/plugged")
 	  Plug 'preservim/nerdcommenter'
 	  Plug 'Xuyuanp/nerdtree-git-plugin'
 	  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+	  Plug 'folke/which-key.nvim'
 
 	  Plug 'folke/lsp-colors.nvim'
 	  Plug 'onsails/lspkind-nvim'
