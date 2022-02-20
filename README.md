@@ -1,17 +1,81 @@
 # nvim_config
 
-Git to store and share my Neovim config. Stay simple with a basic configuration of 'lsp-config' plugin.
+A repository to store and share my Neovim config. Stay simple with a basic configuration of 'lsp-config' plugin.
 
-### Lsp-config
+Feel free to make some **pull requests** if you want to upgrade this configuration.
 
-##### Diagnostics :
-| Shortcut			|		Description 							|
-|-------------------|-----------------------------------------------|
-| [space] - e		|		show Diagnostics						|
-| [space] - q		|		add the diagnostics to location list	|
-| ]d (or) [d 		|		go to next/previous diagnostic			|
+## To install this configuratin
 
-##### Common LSP features :
+Before going any further :
+*If **Neovim** is not installed, check this step bellow before going any further.*
+*If you already **have a configuration**, save it in any way you want. This installation will eease it.*
+
+Git clone the repository in the `Home/.config` dir. and rename it `nvim` :
+```git clone git@github.com:Spidfail/nvim_config.git ~/.config/nvim```
+
+Then install the plugins from your terminal
+```nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa```   
+... *or run the following command in Neovim instance (some ugly bugs may appear at start)*   
+```:PlugUpgrade``` -> ```:PlugInstall``` -> ```:PlugUpdate```
+
+*Your Neovim is ready !*
+
+## Install and Maintain Neovim
+
+#### Vim Transition
+If you want to simply **migrate** from *Vim to Neovim*, check this [link](https://neovim.io/doc/user/nvim.html#nvim-from-vim).   
+
+#### To know more
+If you want to **know more** about the project and *why it exists*, check the [official wiki](https://github.com/neovim/neovim/wiki/Introduction).
+
+### Install :
+
+To install Neovim, check the [official documentation](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+This configuration is working eather on **stable version** or **developement version**.
+> If you are using a Mac(book), I recommend you install it with [Homebrew](https://brew.sh) with [these instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-on-macos-or-linux).
+
+### Manage Plugins
+
+To **install a plugin**, you have to modify the `./plug.vim` config file, juste like the following example :
+```
+call plug#begin()
+Plug 'junegunn/vim-easy-align'
+call plug#end()
+```
+Put his name between those already listed, then run `:PlugInstall` in a Neovim session.
+> This is the shortand notation. Check this [link]() to see more notations.
+> ***Don't put it in the init.vim***
+
+To uninstall a plugin, delete the `Plug` line in the `./plug.vim` file, then run `:PlugClean` in a Neovim session.
+
+#### Plug commands
+| Command                             | Description                                                        |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| `PlugInstall [name ...] [#threads]` | Install listed plugins                                             |
+| `PlugUpdate [name ...] [#threads]`  | Install or update listed plugins                                   |
+| `PlugClean[!]`                      | Remove unlisted plugins (bang version will clean without prompt)   |
+| `PlugUpgrade`                       | Upgrade vim-plug itself                                            |
+| `PlugStatus`                        | Check the status of plugins                                        |
+| `PlugDiff`                          | Examine changes from the previous update and the pending changes   |
+| `PlugSnapshot[!] [output path]`     | Generate script for restoring the current snapshot of the plugins  | 
+
+> From [vim-plug](https://github.com/junegunn/vim-plug#commands)
+
+
+### Maintain :
+
+To update Neovim, use the package manager you used to install it. However I recommend you to check the _**latest release**_ to avoid any troubles.
+
+**Warning :** Please remember that Neovim is **very new** which means it can be subject to major transformations. Sometime, if you update your Neovim,
+some bugs can appear. To avoid it, here some advice :
+- Check if this repository has new commits and update it.
+- Update your Neovim on regular basis.
+- If you update your Neovim, don't forget to **update your plugins** with `:PlugUpdate` .
+- If you update your Plugins, don't forget to **update your Neovim**.
+
+## Shortcuts
+### LSP basic commands (or `lsp-config` plugin)
+
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
 | g - d				|		go to definition						|
@@ -31,7 +95,15 @@ Git to store and share my Neovim config. Stay simple with a basic configuration 
 | [space] - D		|		get type definition						|
 | [space] - rn		|		rename file								|
 
-### Auto-completion
+##### Diagnostics :
+| Shortcut			|		Description 							|
+|-------------------|-----------------------------------------------|
+| [space] - e		|		show Diagnostics						|
+| [space] - q		|		add the diagnostics to location list	|
+| ]d (or) [d 		|		go to next/previous diagnostic			|
+
+
+### Auto-completion (or `nvim-cmp` plugin)
 
 | Shortcut			|		Description 							|
 |-------------------|-----------------------------------------------|
@@ -51,7 +123,7 @@ Examples :
 - etc.
 It supports tab completion.
 
-### NERDTree
+### Tree manager (or `NERDTree` plugin)
 
 | Shortcut			|		Description 											|
 |-------------------|---------------------------------------------------------------|
@@ -60,15 +132,15 @@ It supports tab completion.
 | [Ctrl] - f		|		find and reveal the file for the active buffer			|
 | [Leader] - n		|		put the cursor on opened NERDTree window (or open one)	|
 
-### Commwnt management (or 'NERDCommenter')
 
-#### Most important :
+### Comment management (or `NERDCommenter`)
+
+##### Most important :
 | Shortcut			|		Description 											|
 |-------------------|---------------------------------------------------------------|
 | ++				|		comment/uncomment current or selected lines/block		|
 
-#### The rest provided by the plugin :
-
+##### The rest provided by the plugin :
 | Shortcut					|		Description 																		|
 |---------------------------|-------------------------------------------------------------------------------------------|
 | [leader] - cc 			|	Comment out the current line or text selected in visual mode.							|
