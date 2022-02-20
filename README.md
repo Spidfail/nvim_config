@@ -6,15 +6,16 @@ Feel free to make some **pull requests** if you want to upgrade this configurati
 
 ## To install this configuration
 
-Before going any further :
-*If **Neovim** is not installed, check this step bellow before going any further.*
-*If you already **have a configuration**, save it in any way you want. This installation will eease it.*
+Before going any further :   
+*If **Neovim** is not installed, check this step bellow before going any further.*   
+*If you already **have a configuration**, save it in any way you want. This installation will erase it.*
 
-Git clone the repository in the `Home/.config` dir. and rename it `nvim` :
-```git clone git@github.com:Spidfail/nvim_config.git ~/.config/nvim```
+Git clone the repository in the `Home/.config` directory and rename it `nvim` then install the plugins from your terminal :   
+```
+git clone git@github.com:Spidfail/nvim_config.git ~/.config/nvim
+nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa
+```
 
-Then install the plugins from your terminal
-```nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa```   
 ... *or run the following command in Neovim instance (some ugly bugs may appear at start)*   
 ```
 :PlugUpgrade
@@ -30,7 +31,7 @@ If you want to simply **migrate** from *Vim to Neovim*, check this [link](https:
 
 To **install Neovim**, check the [official documentation](https://github.com/neovim/neovim/wiki/Installing-Neovim). This configuration is working eather on *stable version* or *developement version*.
 To **update Neovim**, use the package manager you used to install it. However I recommend you to check the _**latest release**_ to avoid any troubles.
-> If you are using a Mac(book), I recommend you to install it with [Homebrew](https://brew.sh) with [these instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-on-macos-or-linux).   
+> If you are using a Mac(book), I recommend you to use [Homebrew](https://brew.sh) with [these instructions](https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-on-macos-or-linux).   
 
 **Warning :** Please remember that Neovim is **very new** which means it can be subject to major transformations. Sometime, if you update your Neovim,
 some bugs can appear. To avoid it, here some advice :
@@ -42,7 +43,7 @@ some bugs can appear. To avoid it, here some advice :
 
 ## Manage Plugins
 
-The plugins are an important part of what make Vim and Neovim **extensible and customisable**. This configuration implemented the plugins I'm currently using and only those. Once you have install it, I recommend checking all the available plugins (and there is a lot) for Vim and Neovim (the latest is compatible with both). The installation process is pretty easy, the hard part is to learn and remember what they can offer as there shortcuts too.   
+The plugins are an important part of what make Vim and Neovim **extensible and customisable**. This configuration implemented the plugins I'm currently using and only those. Once you have installed it, I recommend you **checking** all the **available plugins** (and there is a lot) for Vim and Neovim (the latest is compatible with both). The installation process is pretty easy, the hard part is to learn and remember what they can offer as there shortcuts too.   
 Remember that more there are, more they can cause **lag** or **delay** on variable operations. Each plugin have his `:help` page, use it anytime you feeling the need.
 
 Here a usefull list to discover more plugins :
